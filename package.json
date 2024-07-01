@@ -1,0 +1,58 @@
+{
+    "name": "react-mobx-mui-express-ts-boilerplate",
+    "version": "1.0.0",
+    "description": "A TypeScript-based boilerplate project for full-stack development",
+    "keywords": [
+        "express",
+        "nodejs",
+        "React",
+        "MobX",
+        "MUI",
+        "Boilerplate"
+    ],
+    "author": "Nolesh",
+    "license": "MIT",
+    "scripts": {
+        "test": "(npm run --prefix ./client test) && (npm run --prefix ./server test)",
+
+        "dev:client": "npm run --prefix ./client dev",
+        "dev:server": "npm run --prefix ./server dev",
+        "start": "concurrently --kill-others-on-fail \"npm run dev:client\" \"npm run dev:server\"",
+
+        "build": "npm run --prefix ./client build && npm run --prefix ./server build",
+
+        "stylelint": "stylelint ./client/src/**/*.{scss,css} --quiet",
+        "stylelint-fix": "stylelint ./client/src/**/*.{scss,css} --fix",
+        "lint:client": "eslint ./client/src/**/*.{js,jsx,ts,tsx} --quiet",
+        "lint-fix:client": "eslint ./client/src/**/*.{js,jsx,ts,tsx} --fix",
+        "lint:server": "eslint ./server/src/**/*.{js,ts} --quiet",
+        "lint-fix:server": "eslint ./server/src/**/*.{js,ts} --fix",
+        "lint": "npm run stylelint-fix && npm run lint-fix:client && npm run lint-fix:server",
+        "lint:staged": "npx lint-staged",
+        
+        "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
+        "setup": "(npm run --prefix ./client setup) && (npm run --prefix ./server setup) && npm i"
+    },
+    "lint-staged": {
+        "*.{html,json}": "prettier --write",
+        "*.{js,jsx,ts,tsx}": "eslint --fix",
+        "*.{scss,css}": "stylelint --fix"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.39.0",
+        "@typescript-eslint/parser": "^5.39.0",
+        "concurrently": "^7.4.0",
+        "eslint": "^8.24.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.31.8",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1",
+        "stylelint": "^14.13.0",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-sass-guidelines": "^9.0.1",
+        "stylelint-config-standard": "^28.0.0",
+        "stylelint-prettier": "^2.0.0"
+    }
+}

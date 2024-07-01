@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/dist
+.env
+.idea
+/.project
+
+# other
+/data
