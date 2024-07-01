@@ -66,6 +66,7 @@ This boilerplate includes a practical example application: a To-Do List. Learn h
   - **/utils**: Utility functions.
 - **/shared**: Contains common functions and types shared between client and server.
   - **types.ts**: General types for communication between server and client.
+  - **routes.ts**: Defines the application's routes.
 
 ## License
 
