@@ -30,8 +30,8 @@
         "lint": "npm run stylelint-fix && npm run lint-fix:client && npm run lint-fix:server",
         "lint:staged": "npx lint-staged",
         
-        "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
-        "setup": "(npm run --prefix ./client setup) && (npm run --prefix ./server setup) && npm i"
+        "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",        
+        "setup": "npm i && (cd ./client && npm run setup && cd ..) && (cd ./server && npm run setup)"       
     },
     "lint-staged": {
         "*.{html,json}": "prettier --write",
