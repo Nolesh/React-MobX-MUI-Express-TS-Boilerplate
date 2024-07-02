@@ -81,7 +81,7 @@ module.exports = function (options) {
             title: "React + MobX + MUI Boilerplate",
             template: path.join(sourcePath, "index.html"),
             filename: "index.html",
-            // favicon: path.resolve(__dirname, '../../public/assets/favicon.ico'),
+            // favicon: path.resolve(__dirname, '../public/favicon.ico'),
         }),
 
         // new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),

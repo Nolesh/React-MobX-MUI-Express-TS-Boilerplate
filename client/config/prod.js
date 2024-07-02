@@ -32,7 +32,7 @@ module.exports = function () {
                 minSize: 20000,
                 minRemainingSize: 0,
                 minChunks: 1,
-                maxSize: 300000,
+                // maxSize: 300000,
                 maxAsyncRequests: 30,
                 maxInitialRequests: 30,
                 enforceSizeThreshold: 50000,
